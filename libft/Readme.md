@@ -1,5 +1,5 @@
 ## ft_substr functio :
-#### explaination of
+    #### explaination of
         `
         s_len = ft_strlen(s);
 	    if (start >= s_len)
