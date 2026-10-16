@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:46:28 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/15 16:12:48 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/16 18:06:20 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static size_t	ft_count_words(const char *str, char sep, size_t start)
 	return (w_count);
 }
 
-static void	ft_free_all(char **dest, size_t size)
+static void	*ft_free_all(char **dest, size_t size)
 {
 	size_t	i;
 
@@ -54,6 +54,7 @@ static void	ft_free_all(char **dest, size_t size)
 		i++;
 	}
 	free(dest);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -74,7 +75,7 @@ char	**ft_split(char const *s, char c)
 			j++;
 		dest[i] = malloc(ft_count_words(s, c, j) + 1);
 		if (dest[i] == NULL)
-			ft_free_all(dest, i);
+			return (ft_free_all(dest, i));
 		x = 0;
 		while (x < ft_count_words(s, c, j))
 			dest[i][x++] = s[j + x];
