@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 09:33:39 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/19 07:44:35 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/19 16:27:01 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,13 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_lstadd_front(t_list **lst, t_list *new);
-void			ft_lstadd_back(t_list **lst, t_list *new); // EDITED
+void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstdelone(t_list *lst, void (*del)(void *));// ADDED
+void			ft_lstclear(t_list **lst, void (*del)(void *));// ADDED
+void			ft_lstiter(t_list *lst, void (*f)(void *));// ADDED
 // ======== CHAR ==========
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-// NEED FIX
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 // ======================================
@@ -73,6 +75,7 @@ char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // ======== T_LIST ==========
 t_list			*ft_lstnew(void *content);
-t_list			*ft_lstlast(t_list *lst); // NEW
-
+t_list			*ft_lstlast(t_list *lst);
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*));
+//ADDED ft_lstmap
 #endif
