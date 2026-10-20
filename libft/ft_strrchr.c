@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 17:21:32 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/13 17:46:33 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/20 19:41:53 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,13 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+	// printf("strrchr: %s\n", strrchr("hello world", ' '));
+
+	// printf("ft_strrchr: %s\n", ft_strrchr("", ' ');
+// }

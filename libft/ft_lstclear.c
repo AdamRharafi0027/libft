@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 09:33:55 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/19 11:28:59 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/20 09:16:41 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 			instead of
 				ft_lstdelone(current, del);
 		*/
+		// why we dont have to set if del == NULL

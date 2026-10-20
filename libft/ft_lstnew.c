@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 19:53:52 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/16 20:05:30 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/20 09:16:14 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,5 @@ t_list	*ft_lstnew(void *content)
 // 	printf("%d\n",*(int *)node1->content);
 // 	free(node1);
 // }
+		// node->content = malloc(ft_strlen((char *)content));
+		// ft_memcpy(node->content, content, ft_strlen((char *)content));

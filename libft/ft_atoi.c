@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 08:46:42 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/20 10:26:35 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/20 10:39:56 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_handle_oveflow(long nbr, int sign)
 {
-	if (nbr > 922337203685477580)
+	if (nbr > MAX_MULTIPLY)
 	{
 		if (sign == 1)
 			return (-1);
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result > 922337203685477580 || result < -922337203685477580)
+		if (result > MAX_MULTIPLY || result < -MAX_MULTIPLY)
 			return (ft_handle_oveflow(result, sign));
 		result = result * 10 + (str[i] - '0');
 		i++;
@@ -52,7 +52,7 @@ int	ft_atoi(const char *str)
 // #include <stdio.h>
 // int main()
 // {
-// 	char str[] = "337203685477580109223372036854775801092233720368547758010";
+// 	char str[] = "-9223372036854775805";
 // 	printf("%d\n", 	ft_atoi(str));
 // 	printf("%d\n", 	   atoi(str));
 // }

@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 09:33:39 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/20 10:31:13 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/20 10:37:33 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define MAX_MULTIPLY (922337203685477580)
 // ======== STRUCT ==========
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 11:29:36 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/20 09:28:18 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:31:18 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		printf("%s\n", (char *)current->content);
 // 		current = current->next;
 // 	}
+
 // }
