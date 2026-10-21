@@ -101,14 +101,26 @@ instead of char -->
 • memmove // DONE
 • strlcpy // DONE
 • strlcat // DONE
-• toupper // -
-• tolower // -
+• toupper // DONE
+• tolower // DONE
 • strchr // DONE
 • strrchr // DONE
-• strncmp // DONE
+• strncmp
 • memchr
 • memcmp
 • strnstr
 • atoi
 • calloc
 • strdup
+ft_substr
+ft_strjoin
+ft_strtrim
+ft_split
+ft_itoa
+ft_strmapi
+ft_striteri
+
+ft_putchar_fd
+ft_putstr_fd
+ft_putendl_fd
+ft_putnbr_fd

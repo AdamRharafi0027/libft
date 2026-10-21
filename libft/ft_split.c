@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:46:28 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/16 18:06:20 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/21 09:51:15 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,10 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	x;
 	char	**dest;
 
+	if (!s)
+		return (NULL);
 	dest = malloc((ft_get_size(s, c) + 1) * sizeof(char *));
 	if (!dest)
 		return (NULL);
@@ -73,14 +74,11 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[j] && ft_is_sep(s[j], c))
 			j++;
-		dest[i] = malloc(ft_count_words(s, c, j) + 1);
-		if (dest[i] == NULL)
-			return (ft_free_all(dest, i));
-		x = 0;
-		while (x < ft_count_words(s, c, j))
-			dest[i][x++] = s[j + x];
-		dest[i++][x] = '\0';
-		j += ft_count_words(s, c, j);
+		dest[i] = ft_substr(s, j, ft_count_words(s, c, j));
+		if (!dest[i])
+			return (ft_free_all(dest, ft_get_size(s, c)));
+		j += ft_count_words(s, c, j) + 1;
+		i++;
 	}
 	dest[i] = NULL;
 	return (dest);
@@ -90,9 +88,14 @@ char	**ft_split(char const *s, char c)
 
 // int	main()
 // {
-// 	char **result = ft_split(",,,Hello,,World,1337,,,", ',');
+// 	char **result = ft_split(NULL, ',');
+// 	if (!result)
+// 	{
+// 		printf("NULL");
+// 		return 0;
+// 	}
 // 	int i = 0;
-// 	size_t	size = ft_get_size(",,,Hello,,World,1337,,,", ',');
+// 	// size_t	size = ft_get_size(",,,Hello,,World,1337,,,", ',');
 // 	while (result[i])
 // 	{
 // 		printf("%s\n", result[i]);
@@ -101,13 +104,7 @@ char	**ft_split(char const *s, char c)
 // 	}
 // 	free(result);
 // }
-/*
-	ft_split("Hello,world,1337", ',');
 
-
-	Expected result:
-	result[0] = "Hello"
-	result[1] = "world"
-	result[2] = "1337"
-	result[3] = NULL
-*/
+// If a function returns NULL and you store
+// that NULL in a pointer variable (dest),
+// dereferencing dest will cause a segmentation fault (crash).

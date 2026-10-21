@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:01:27 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/15 11:46:14 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/21 09:44:56 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static size_t	ft_is_set(char c, char const *set)
 	return (0);
 }
 
-static size_t	ft_get_index(char const *str, char const *set, int reverse)
+static int	ft_get_index(char const *str, char const *set, int reverse)
 {
 	size_t	i;
 
@@ -51,10 +51,12 @@ static size_t	ft_get_index(char const *str, char const *set, int reverse)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
+	int		start;
 	size_t	end;
 	size_t	len;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = ft_get_index(s1, set, 0);
 	if (start == -1)
 		return (ft_substr(s1, 0, 0));
@@ -62,3 +64,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = (end - start + 1);
 	return (ft_substr(s1, start, len));
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+// 	char *dest = ft_strtrim("ssss", NULL);
+// 	printf("ft_strtrim: %s\n", dest);
+// }

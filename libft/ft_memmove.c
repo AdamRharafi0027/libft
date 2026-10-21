@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 10:46:25 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/20 17:44:27 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/21 14:34:47 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-	// char src[] = "ABCDEFG";
-	// ft_memmove(src + 2, src, 2);
-	// printf("ft_memmove: %s\n", src);
-
-	// char src1[] = "ABCDEFG";
-	// memmove(src1 + 2, src1, 2);
-	// printf("memmove: %s\n", src1);
-// }

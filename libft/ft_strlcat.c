@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:08:12 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/20 19:27:54 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/21 14:38:26 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dest_length + i] = '\0';
 	return (dest_length + src_length);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-	// char dest[15] = "hello ";
-	// char *src = "world";
-	// printf("ft_strlcat : %zu\n", ft_strlcat(dest, src, 15));
-
-	// char dest1[12] = "hello ";
-	// char *src1 = "world";
-	// printf("strlcat : %zu\n", strlcat(dest1, src1, 12));
-// }

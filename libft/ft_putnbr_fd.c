@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 11:05:03 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/16 11:32:57 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:25:51 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,3 +51,9 @@ void	ft_putnbr_fd(int n, int fd)
 	i = ft_copy_num(tab, number);
 	ft_print_end(tab, i, fd);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	ft_putnbr_fd(-2147483648, 1);
+// }
