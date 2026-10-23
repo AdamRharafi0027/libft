@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 09:33:39 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 08:59:27 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/23 07:47:32 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define MAX_MULTIPLY (922337203685477580)
+# define OVER_FLOW (9223372036854775807)
+
 // ======== STRUCT ==========
 typedef struct s_list
 {
@@ -65,6 +66,7 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strdup(const char *s);
 // ======================================
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);

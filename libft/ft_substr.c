@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:22:11 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 07:37:31 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 08:24:32 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	char *dest1 = ft_substr("sssss", -5, -5);
-// 	printf("ft_strsub: %s\n", dest1);
-// 	free(dest1);
-// }

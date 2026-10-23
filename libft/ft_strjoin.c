@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 14:36:24 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 07:42:25 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 08:25:09 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(dest + s1_len, s2, s2_len + 1);
 	return (dest);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char *dest = ft_strjoin(NULL, "hello ");
-// 	printf("ft_strjoin: %s\n", dest);
-// 	free(dest);
-// }

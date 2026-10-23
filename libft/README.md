@@ -1,126 +1,241 @@
-<!-- *This project has been created as part of the 42 curriculum by <arharafi/>.*
+*This project has been created as part of the 42 curriculum by **arharafi***
+# libft
 
+## Description
+> Libft is a made self C library developed as part of the 42 curriculum.
+The goal of this project is to reimplementing standard C library functions and implement additional utility functions.
+This library helps develop a deeper understanding of C programming concepts,
+memory management, pointers, strings manipulation, and linked lists.
 
 
+## Instructions
 
+### installation
 
+Installing the  `make` tools :
 
+**windows**
+```
+winget install ezwinports.make
+```
+**Linux** (Debian/Ubuntu)
+```
+sudo apt update
 
+sudo apt install make
+```
+**macOS**
+```
+xcode-select --install
+```
 
+To run this project you must run the following Steps
 
+### first
+Clone the repository and navigate to the project directory:
+```
+git clone https://github.com/AdamRharafi0027/libft.git
+```
+Then :
+```
+cd libft
+```
+and run this command to Compile the library:
+```
+make
+```
+at **root** of the repository
 
+Example :
+```
+libft/
+├─ ft_atoi.c
+├─ ft_bzero.c
+├─ ft_calloc.c
+├─ ...
+├─ libft.h
+├─ Makefile
+└─ README.md
+```
+This will generate the static Library *libft.a*
 
+>Check below the **make** command you can
+run on this project :
+```
+### make commands ###
 
+make : Compiles the library
 
+make clean : Removes object files
 
+make fclean: Removes object files and libft.a
 
+make re: Rebuilds the library from scratch
+```
+### Usage
+Include the library header in your C source file:
 
+`#include "libft.h"`
 
+Compile your program with the library :
 
+`cc main.c -L. -lft -o program`
 
+Run the program :
 
+`./program`
 
+## Library Description
 
+The library contains reimplementations of standard C functions and additional utility functions, organized into the following categories.
 
+>**Character Functions**
 
+Functions for checking and converting individual characters.
 
+ft_isalpha
 
+ft_isdigit
 
+ft_isalnum
 
+ft_isascii
 
+ft_isprint
 
+ft_toupper
 
+ft_tolower
 
+>**String Functions**
 
+Functions for manipulating and processing strings.
 
+ft_strlen
 
+ft_strlcpy
 
+ft_strlcat
 
+ft_strchr
 
+ft_strrchr
 
+ft_strncmp
 
+ft_strnstr
 
+ft_strdup
 
-## ft_substr functio :
-    #### explaination of
-        `
-        s_len = ft_strlen(s);
-	    if (start >= s_len)
-		    actual_len = 0;
-	    else
-		    actual_len = ft_min(len, s_len - start);
-	    dest = malloc((actual_len)+1);
-        `
-*s_len = ft_strlen(s);* : this for calculating the lengths of the s
-*if (start >= s_len) actual_len = 0;* : this for check if the start index is outside the     available characters
-*actual_len = ft_min(len, s_len - start);* : we check that the smallest one
-    **because** :
-        *s_len (string length) - start* = the number of the available characters
-        *len* : requested characters
-        **if** the requested characters is less than available characters it means
-                we can copy all the requested characters
-        **else** the requested characters is more than the available that means
-                    we will just allocate the available characters
-
-why we use int in
-`
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-
-`
-instead of char -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-• strlen // DONE
-• memset // DONE
-• bzero // DONE
-• memcpy // DONE
-• memmove // DONE
-• strlcpy // DONE
-• strlcat // DONE
-• toupper // DONE
-• tolower // DONE
-• strchr // DONE
-• strrchr // DONE
-• strncmp
-• memchr
-• memcmp
-• strnstr
-• atoi
-• calloc
-• strdup
 ft_substr
+
 ft_strjoin
+
 ft_strtrim
+
 ft_split
-ft_itoa
+
 ft_strmapi
+
 ft_striteri
 
+>**Memory Functions**
+
+Functions for allocating, setting, copying, and comparing memory.
+
+ft_memset
+
+ft_bzero
+
+ft_memcpy
+
+ft_memmove
+
+ft_memchr
+
+ft_memcmp
+
+ft_calloc
+
+>**Conversion Functions**
+
+Functions for converting values between different representations.
+
+ft_atoi
+
+ft_itoa
+
+>**Output Functions**
+
+Functions for writing characters, strings, and numbers to a file descriptor.
+
 ft_putchar_fd
+
 ft_putstr_fd
+
 ft_putendl_fd
+
 ft_putnbr_fd
+
+>**Linked List Functions**
+
+Functions for creating and managing singly linked lists.
+
+ft_lstnew
+
+ft_lstadd_front
+
+ft_lstsize
+
+ft_lstlast
+
+ft_lstadd_back
+
+ft_lstdelone
+
+ft_lstclear
+
+ft_lstiter
+
+ft_lstmap
+
+📁 Project Structure
+```
+libft/
+├─ ft_*.c
+├─ libft.h
+├─ Makefile
+└─ README.md
+```
+- libft.h :
+
+    Contains function prototypes, overflow macro, type definitions, and necessary declarations.
+
+- Makefile :
+
+    Automates compilation and library creation.
+
+- ft_*.c :
+
+    Contains the source code for the implemented functions.
+> After you run the `make` command you get a `libft.a`
+- libft.a :
+
+     The compiled static library generated by `make`.
+
+## Resources
+
+The following resources can help explain the concepts and behavior of the functions implemented in this project:
+
+- [Make File Tutorial Document](https://makefiletutorial.com)
+- [Neso Academy Channel](https://www.youtube.com/@nesoacademy)
+- The official Libft project subject provided by 42
+- [Learn-c.org](https://learn-c.org/)
+
+## AI Usage
+
+I use AI tools to clarify C programming concepts, understand standard library function behavior, investigate debugging issues.
+
+AI assistance was used as a learning resource. The code was reviewed and tested against the project's requirements.
+
+|========================== END ================================|

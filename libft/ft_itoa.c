@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:19:37 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 11:26:59 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 08:26:51 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,28 +64,3 @@ char	*ft_itoa(int n)
 	ft_implement_str(dest, number, num_len, sign);
 	return (dest);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char *res1 = ft_itoa(123);
-// 	printf("Test 1 (123) => %s\n", res1);
-// 	free(res1);
-
-// 	char *res2 = ft_itoa(-123);
-// 	printf("Test 2 (-123) => %s\n", res2);
-// 	free(res2);
-
-// 	char *res3 = ft_itoa(0);
-// 	printf("Test 3 (0) => %s\n", res3);
-// 	free(res3);
-
-// 	char *res4 = ft_itoa(2147483647);
-// 	printf("Test 4 (2147483647) => %s\n", res4);
-// 	free(res4);
-
-// 	char *res5 = ft_itoa(-2147483648);
-// 	printf("Test 5 (-2147483648) => %s\n", res5);
-// 	free(res5);
-// }

@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:01:27 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 09:44:56 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 08:25:41 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = (end - start + 1);
 	return (ft_substr(s1, start, len));
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	char *dest = ft_strtrim("ssss", NULL);
-// 	printf("ft_strtrim: %s\n", dest);
-// }

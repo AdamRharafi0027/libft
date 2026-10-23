@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:41:46 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 07:07:39 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 08:03:52 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int main()
-// {
-// 	printf("ft_strnstr: %s\n", ft_strnstr("hhhh", "abc", 1844674407370955161));
-// }

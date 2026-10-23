@@ -6,19 +6,23 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 08:46:42 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 07:11:02 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 19:11:24 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_handle_oveflow(long nbr, int sign)
+static int	ft_handle_overflow(long nbr, int digit, int sign)
 {
-	if (nbr > MAX_MULTIPLY)
+	if (sign == 1)
 	{
-		if (sign == 1)
+		if (nbr > (OVER_FLOW - digit) / 10)
 			return (-1);
-		return (0);
+	}
+	else
+	{
+		if (((unsigned long)nbr * 10) + digit > ((unsigned long)OVER_FLOW + 1))
+			return (0);
 	}
 	return (-2);
 }
@@ -28,6 +32,7 @@ int	ft_atoi(const char *str)
 	size_t	i;
 	long	result;
 	int		sign;
+	int		digit;
 
 	i = 0;
 	result = 0;
@@ -42,24 +47,22 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (ft_handle_oveflow(result, sign) != -2)
-			return (ft_handle_oveflow(result, sign));
-		result = result * 10 + (str[i] - '0');
+		digit = str[i] - '0';
+		if (ft_handle_overflow(result, digit, sign) != -2)
+			return (ft_handle_overflow(result, digit, sign));
+		result = result * 10 + (digit);
 		i++;
 	}
 	return (result * sign);
 }
-// #include <string.h>
+
 // #include <stdio.h>
+// #include <string.h>
+
 // int main()
 // {
-// 	char str[] = "9223372036854775807";
-// 	printf("%d\n", 	ft_atoi(str));
-// 	printf("%d\n", 	   atoi(str));
+// 	char str[] = "-9223372036854775808";
+
+// 	printf("ft_atoi: %d\n", ft_atoi(str));
+// 	printf("atoi: %d\n", atoi(str));
 // }
-/*
-
-
-9223372036854775807
-
-*/

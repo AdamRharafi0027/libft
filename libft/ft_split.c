@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:46:28 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 09:51:15 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/22 08:26:22 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,28 +83,3 @@ char	**ft_split(char const *s, char c)
 	dest[i] = NULL;
 	return (dest);
 }
-
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	char **result = ft_split(NULL, ',');
-// 	if (!result)
-// 	{
-// 		printf("NULL");
-// 		return 0;
-// 	}
-// 	int i = 0;
-// 	// size_t	size = ft_get_size(",,,Hello,,World,1337,,,", ',');
-// 	while (result[i])
-// 	{
-// 		printf("%s\n", result[i]);
-// 		free(result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// }
-
-// If a function returns NULL and you store
-// that NULL in a pointer variable (dest),
-// dereferencing dest will cause a segmentation fault (crash).
