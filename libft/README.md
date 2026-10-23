@@ -29,18 +29,9 @@ sudo apt install make
 xcode-select --install
 ```
 
-To run this project you must run the following Steps
+### To run this project you must run the following Steps:
 
-### first
-Clone the repository and navigate to the project directory:
-```
-git clone https://github.com/AdamRharafi0027/libft.git
-```
-Then :
-```
-cd libft
-```
-and run this command to Compile the library:
+Run this command to Compile the library:
 ```
 make
 ```
