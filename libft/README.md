@@ -229,4 +229,6 @@ I use AI tools to clarify C programming concepts, understand standard library fu
 
 AI assistance was used as a learning resource. The code was reviewed and tested against the project's requirements.
 
-|========================== END ================================|
+==========================================================
+
+<h3 style="color: #00FFFF;">Created by Adam RHARAFI - 1337/42</h3>
