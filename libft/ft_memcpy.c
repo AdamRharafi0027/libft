@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 10:08:19 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/22 07:56:03 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/24 14:57:30 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t		i;
-	char		*dest_ptr;
-	const char	*src_ptr;
+	size_t				i;
+	unsigned char		*dest_ptr;
+	unsigned const char	*src_ptr;
 
 	i = 0;
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
+	dest_ptr = (unsigned char *)dest;
+	src_ptr = (unsigned const char *)src;
 	while (i < n)
 	{
 		dest_ptr[i] = src_ptr[i];

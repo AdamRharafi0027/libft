@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 08:46:42 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/22 19:11:24 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/24 16:05:03 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_handle_overflow(long nbr, int digit, int sign)
 	}
 	else
 	{
-		if (((unsigned long)nbr * 10) + digit > ((unsigned long)OVER_FLOW + 1))
+		if ((unsigned long)nbr > ((unsigned long)OVER_FLOW + 1) - digit / 10)
 			return (0);
 	}
 	return (-2);
@@ -55,14 +55,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	char str[] = "-9223372036854775808";
-
-// 	printf("ft_atoi: %d\n", ft_atoi(str));
-// 	printf("atoi: %d\n", atoi(str));
-// }

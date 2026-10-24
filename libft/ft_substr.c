@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:22:11 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/22 08:24:32 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/24 16:24:19 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			actual_len;
 	char			*dest;
 
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		actual_len = 0;

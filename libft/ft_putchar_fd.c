@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:03:48 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 11:21:29 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/24 16:32:44 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	ft_putchar_fd('d', 1);
-// }

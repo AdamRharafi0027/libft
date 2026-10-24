@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 10:47:11 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/21 11:22:04 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/24 16:33:04 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ void	ft_putstr_fd(char *s, int fd)
 	s_len = ft_strlen(s);
 	write(fd, s, s_len);
 }
-
-// #include <stdio.h>
-
-// int main ()
-// {
-// 	ft_putstr_fd("NULL", 1);
-// }

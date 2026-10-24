@@ -6,7 +6,7 @@
 /*   By: arharafi <arharafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:41:22 by arharafi          #+#    #+#             */
-/*   Updated: 2026/10/22 16:18:06 by arharafi         ###   ########.fr       */
+/*   Updated: 2026/10/24 17:14:26 by arharafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
-	size_t	size;
 
-	if (!new || !lst)
+	if (lst == NULL || new == NULL)
 		return ;
 	if (*lst == NULL)
 	{
@@ -25,15 +24,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	current = *lst;
-	size = ft_lstsize(*lst);
-	while (size > 0)
+	while (current->next != NULL)
 	{
-		size--;
-		if (current->next == NULL)
-		{
-			current->next = new;
-			return ;
-		}
-		current = current->next;
+		current->next = new;
+		return ;
 	}
+	current = current->next;
 }
