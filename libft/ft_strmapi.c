@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*dest;
 
 	if (!s || !f)
-		return (ft_strdup(""));
+		return (NULL);
 	s_len = ft_strlen(s);
 	dest = malloc(s_len + 1);
 	if (!dest)

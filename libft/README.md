@@ -222,6 +222,7 @@ The following resources can help explain the concepts and behavior of the functi
 - [Neso Academy Channel](https://www.youtube.com/@nesoacademy)
 - The official Libft project subject provided by 42
 - [Learn-c.org](https://learn-c.org/)
+- [w3schools](https://www.w3schools.com/)
 
 ## AI Usage
 
